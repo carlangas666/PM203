@@ -216,7 +216,6 @@ TOTAL: $${total.toFixed(2)}
 
 agregarPedido(1);
 agregarPedido(4);
-agregarPedido(5);
-agregarPedido(10);
+
 
 mostrarTicket();
