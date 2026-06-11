@@ -9,15 +9,12 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Text>------------------- Componentes Nativos -------------------</Text>
-      <Image source={require('./assets/wave.png')} style={{ width: 200, height: 200 }} />
-      <Text>Hola Mundo React Native</Text>
-      <Text>------------------- Componentes Propio Simple -------------------</Text>
-      <Saludo></Saludo>
-      <Text>------------------- Componentes Propio Compuesto -------------------</Text>
-      <Saludo2></Saludo2>
-      <Text>------------------- Componentes Propio Carlos -------------------</Text>
-      <Perfil></Perfil>
+      <Perfil 
+      nombre="Carlos Alexis Hernández Ortega" 
+      carrera="Ingeniería en Sistemas Computacionales" 
+      materia="Programación Móvil" 
+      cuatri="9no" />
+
       <StatusBar style="auto" />
     </View>
   );
