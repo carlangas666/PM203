@@ -5,12 +5,12 @@
 import{View, Text, Button, StyleSheet} from 'react-native'
 import React, {useState} from 'react'
 
-export const Perfil = ({nombre, carrera, materia, cuatri}) => {
+export const Perfil = ({nombre, carrera, materia, cuatri, estiloExt}) => {
 
     const [mostrar, setMostrar] = useState(false);
     return (
         /*Ejemplo de un estado */
-        <View style={styles.tarjeta}>
+        <View style={[styles.tarjeta, estiloExt]}>
             <Text style={styles.nombre}>{nombre}</Text>
 
             {/*Renderizado condicional, es decir, se muestra un botón para mostrar u ocultar los datos del estudiante.*/}
