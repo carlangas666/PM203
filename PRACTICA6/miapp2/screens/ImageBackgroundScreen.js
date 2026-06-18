@@ -1,12 +1,12 @@
 /*Zona1: Importaciones de componentes y archivos */
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import MenuScreen from './screens/MenuScreen';
+
 /*Zona2: Main - Hogar de los componentes */
-export default function App() {
+export default function ImageBackgroundScreen() {
   return (
     <View style={styles.container}>
-      <MenuScreen></MenuScreen>
+        <Text>Aqui va la practica de mARIA INES</Text>
 
       <StatusBar style="auto"/>
 
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   
 
