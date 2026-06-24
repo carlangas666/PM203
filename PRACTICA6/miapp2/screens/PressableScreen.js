@@ -1,28 +1,11 @@
-/*Zona1: Importaciones de componentes y archivos */
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-
-/*Zona2: Main - Hogar de los componentes */
-export default function PressableScreen() {
-  return (
-    <View style={styles.container}>
-        <Text>Aqui va la practica de Roque y Armando</Text>
-
-      <StatusBar style="auto"/>
-
-
-    </View>
-  );
-}
-/* zona1: importaciones de componentes y archivos */
+/* Zona1: Importaciones de componentes y archivos */
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Switch, Pressable, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 /* Zona2: Main - Hogar de los componentes */
-export default function PressableArea() {
+export default function PressableScreen() {
 
-  /*1*/
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleSwitch = () => {
@@ -30,15 +13,24 @@ export default function PressableArea() {
   };
 
   return (
-    <View style={[styles.container, isDarkMode ? styles.bgDark : styles.bgLight]}>
+    <View style={[
+      styles.container,
+      isDarkMode ? styles.bgDark : styles.bgLight
+    ]}>
 
-      <Text style={[styles.title, isDarkMode ? styles.textDark : styles.textLight]}>
+      <Text style={[
+        styles.title,
+        isDarkMode ? styles.textDark : styles.textLight
+      ]}>
         Ajustes del Sistema
       </Text>
 
       <View style={styles.row}>
-        <Text style={[styles.label, isDarkMode ? styles.textDark : styles.textLight]}>
-          Modo Oscuro: {isDarkMode ? "Activado" : "Desactivado"}
+        <Text style={[
+          styles.label,
+          isDarkMode ? styles.textDark : styles.textLight
+        ]}>
+          Modo Oscuro: {isDarkMode ? 'Activado' : 'Desactivado'}
         </Text>
 
         <Switch
@@ -50,19 +42,30 @@ export default function PressableArea() {
       </View>
 
       <Pressable
-        onPress={() => Alert.alert('Éxito', 'Configuración guardada correctamente')}
-
-  /*2 */
-        onLongPress={() => Alert.alert('Info', 'Mantuviste presionado el botón')}
+        onPress={() =>
+          Alert.alert(
+            'Éxito',
+            'Configuración guardada correctamente'
+          )
+        }
+        onLongPress={() =>
+          Alert.alert(
+            'Información',
+            'Mantuviste presionado el botón'
+          )
+        }
         style={({ pressed }) => [
           styles.button,
-          { backgroundColor: pressed ? '#0056b3' : '#007BFF' }
+          {
+            backgroundColor: pressed
+              ? '#0056b3'
+              : '#007BFF'
+          }
         ]}
       >
-
-
-  {/*3*/}
-        <Text style={styles.buttonText}>Guardar Cambios</Text>
+        <Text style={styles.buttonText}>
+          Guardar Cambios
+        </Text>
       </Pressable>
 
       <StatusBar style="auto" />
@@ -70,7 +73,7 @@ export default function PressableArea() {
   );
 }
 
-/* Zona3: Estilos y Posicionamientos */
+/* Zona3: Estilos */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -126,16 +129,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-});
-/*Zona3: Estilos */
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  
-
 });
